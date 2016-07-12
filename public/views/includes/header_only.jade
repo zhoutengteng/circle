@@ -1,0 +1,36 @@
+//Created by zhoutengteng on 16/7/5.
+div.top(style="background-color: #ffffff; border-color: #ffffff; margin:0px 30px 0px 30px")
+    img.pull-left(src="/picture/title.png", alt="G~L~U~E~C~I~R~C~L~E", style="width:200px; height:60px")
+    form.navbar-form.navbar-right.hidden
+        div.form-group(style="margin-right:5px")
+            input(type="text" placeholder="Email/User" class="form-control")
+        div.form-group(style="margin-right:5px")
+            input(type="password" placeholder="Password" class="form-control")
+        button(type="submit" class="btn btn-success") Sign in
+
+    form.navbar-form.navbar-right
+        div.dropdown
+            a(href="#",class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="username") #{username}
+                span.caret
+            ul.dropdown-menu
+                li
+                    a(href="/circle/edit") 画个圈
+                li
+                    a(href="#") 上传文件
+                li(role="separator" class="divider")
+                li.dropdown-header 个人设置
+                li
+                    a(href="#") 修改密码
+                li
+                    a(href="#") 我的收藏
+                li
+                    a(id="logout") Logout
+    form.visible-lg-inline-block.bs-example.bs-example-form.col-xs-3.pull-right.navbar-form(data-example-id='simple-input-groups')
+        div.input-group
+            span.input-group-addon.glyphicon.glyphicon-search(id="basic-addon1", style="top:0px")
+            input(type='text',name='find', class="form-control",placeholder="Search...",aria-describedby="basic-addon1")
+    div.clearfix
+div.clearfix
+
+script(src="/js/header.js")
+
