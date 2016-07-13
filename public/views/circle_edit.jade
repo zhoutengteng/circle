@@ -1,0 +1,71 @@
+//circle_edit.jade
+extends  ./layout_header_only
+block otherLoad
+block content
+    div(style="margin:10px 20% 10px 20%;padding:0 20px 0 20px; ")
+        form(class="form-inline")
+            div(class="form-group" style="width: 70%; margin-bottom: 20px")
+                label(for= "title" style="margin-right: 10px" ) Theme
+                input(type="text" class="form-control" id="theme" placeholder="Theme" style="width: 60%")
+        form
+            div(class="form-group")
+                label(for="content" style="margin-right: 10px") Conetent
+                //input(type="text" class="form-control" id="Content" placeholder="conten")
+                div
+                textarea(style="width:82%; height: 200px; resize: none" id="content"  placeholder="简要说明" )
+                span(id ="num" style="position: relative; right:110px; top:-4px" class="bg-success")  剩余可输入700字
+        div.clearfix
+        form(id="fileupload" enctype="multipart/form-data" class="container")
+            div(class="form-group")
+                label Your upload pictures
+            div(class="row fileupload-buttonbar")
+                div(class="col-lg-7")
+                    span(class="btn btn-success fileinput-button" style="margin-right: 20px")
+                        i(class="glyphicon glyphicon-plus")
+                        span Add picture...
+                        input(type="file" name="files[]"  id="add")
+                    //button(type="submit" class="btn btn-primary start" style="margin-right: 20px")
+                    //    i(class="glyphicon glyphicon-upload")
+                    //    span start upload
+                    //button(type="reset" class="btn btn-warning cancel" style="margin-right: 20px" )
+                    //    i(class="glyphicon glyphicon-ban-circle")
+                    //    span Cancel upload
+                    button(type="button" class="btn btn-danger delete" style="margin-right: 20px")
+                        i(class="glyphicon glyphicon-trash")
+                        span Delete
+                    //input(type="checkbox" class="toggle")
+                    span(class="fileupload-process")
+                div(class="col-lg-5 fileupload-progress fade")
+                    div(class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100")
+                        div(class="progress-bar progress-bar-success" style="width:0%;")
+                    div(class="progress-extended") &nbsp;
+                div.clearfix
+        table(role="presentation" class="table table-striped" style="width:600px")
+            tbody(class="files")
+
+        button(class="btn btn-default" style="margin-top:40px" id="submit")  提交
+
+
+
+
+    //    p
+    //        label 请选择一个文件
+    //        //input(type="file" id="file")
+    //        input(type="button" class="button1" value="读取图像")
+    //        input(type="button" class="button2" value="读取二进制数据")
+    //        input(type="button" class="button3" value="读取文本文件")
+    //    div(id="result" name="result")
+    //
+    //    div
+    //        img
+    //script(src="/upload/js/vendor/jquery.ui.widget.js")
+    //script(src="/upload/js/jquery.iframe-transport.js")
+    //script(src="/upload/js/jquery.fileupload.js")
+    //script(src="/upload/js/jquery.fileupload-image.js")
+    //script(src="/upload/js/jquery.fileupload-validate.js")
+    //script(src="/upload/js/jquery.fileupload-ui.js")
+    //script(src="/upload/js/main.js")
+    link(href="/upload/css/jquery.fileupload-ui.css", rel="stylesheet")
+    link(href="/upload/css/style.css", rel="stylesheet")
+    link(href="/upload/css/jquery.fileupload.css", rel="stylesheet")
+    script(src="/js/circle_edit.js")
