@@ -1,0 +1,89 @@
+doctype
+html
+    head
+        meta(charset="utf-8")
+        title #{title}
+        include ./includes/head
+        script(src="/js/signup.js")
+    body
+        div.body.theme-showcase(role="document")
+            div.top(style="background-color: #ffffff; border-color: #ffffff; margin:0px 30px 0px 30px")
+                img.pull-left(src="/picture/title.png", alt="G~L~U~E~C~I~R~C~L~E", style="width:200px; height:60px")
+                form.navbar-form.navbar-right
+                    a(href="/signin" class="btn btn-success") Sign in
+                //form.visible-lg-inline-block.bs-example.bs-example-form.col-xs-3.pull-right.navbar-form(data-example-id='simple-input-groups')
+                    div.input-group
+                        span.input-group-addon.glyphicon.glyphicon-search(id="basic-addon1", style="top:0px")
+                        input(type='text',name='find', class="form-control",placeholder="Search...",aria-describedby="basic-addon1")
+                div.clearfix
+            div.clearfix
+        div.page-header.text-center
+            span
+                h1 注册一个账号
+        form
+            div(class="form-group", style="width:70%; margin:0 auto; padding-left:12%")
+                div
+                    label(for="username") User Name
+                div.has-success
+                    input.pull-left(type="text" class="form-control visible-lg-inline-block has-error" id="username" placeholder="User" style="width:40%;margin-top:0px")
+                div.pull-left(style="width:40%; margin-left:30px;")
+                    span.label.label-info(style="word-break:break-all") 数字和字母的组合
+                    span.label.label-success.hidden 输入合理
+            div.clearfix
+            div(class="form-group", style="width:70%; margin:10px auto; padding-left:12%")
+                div
+                    label(for="sex") Sex
+                label.pull-left(class="radio-inline")
+                    input(type="radio" name="sex" id="sex1" value="男")
+                    span 男
+                label.pull-left(class="radio-inline")
+                    input(type="radio" name="sex" id="sex2" value="女")
+                    span 女
+                div.pull-left(style="width:40%; margin-left:30px;")
+                    span.label.label-info(style="word-break:break-all") 选择一项
+                    span.label.label-success.hidden 输入合理
+                div.clearfix
+            div.clearfix
+            div(class="form-group", style="width:70%; margin:10px auto; padding-left:12%")
+                div
+                    label(for="password") password
+                div.has-success
+                    input.pull-left(type="text" class="form-control visible-lg-inline-block " id="password" placeholder="psssword" style="width:40%;margin-top:0px")
+                div.pull-left(style="width:40%; margin-left:30px;")
+                    span.label.label-info(style="word-break:break-all") 数字和字母的组合
+                    span.label.label-success.hidden 输入合理
+            div.clearfix
+            div(class="form-group", style="width:70%; margin:10px auto; padding-left:12%")
+                div
+                    label(for="password_repeat") password repeat
+                div.has-success
+                    input.pull-left(type="password" class="form-control visible-lg-inline-block " id="password_repeat" placeholder="psssword_repeat" style="width:40%;margin-top:0px")
+                div.pull-left(style="width:40%; margin-left:30px;")
+                    span.label.label-info(style="word-break:break-all") 和密码输入要对应一致
+                    span.label.label-success.hidden 输入合理
+            div.clearfix
+            div(class="form-group", style="width:70%; margin:10px auto; padding-left:12%")
+                div
+                    label(for="email") Email address
+                div.has-success
+                    input.pull-left(type="email" class="form-control visible-lg-inline-block " id="email" placeholder="Mail" style="width:40%;margin-top:0px")
+                div.pull-left(style="width:40%; margin-left:30px;")
+                    span.label.label-info(style="word-break:break-all") 数字和字母以及@的组合和
+                    span.label.label-success.hidden 输入合理
+            div.clearfix
+            div(class="form-group", style="width:70%; margin:10px auto; padding-left:12%")
+                div
+                    label(for="telephone") telephone
+                div.has-success
+                    input.pull-left(type="text" class="form-control visible-lg-inline-block " id="telephone" placeholder="Tel" style="width:40%;margin-top:0px")
+                div.pull-left(style="width:40%; margin-left:30px;")
+                    span.label.label-info(style="word-break:break-all") 11位数字
+                    span.label.label-success.hidden 输入合理
+            div.clearfix
+            div(class="form-group", style="width:70%; margin:10px auto; padding-left:12%")
+                label(id="submit" class='btn btn-default') submit
+
+
+
+
+
