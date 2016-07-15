@@ -1,0 +1,7 @@
+ul, ol {
+    list-style-type: none;
+}
+
+div {
+    background-color: white !important;
+}
