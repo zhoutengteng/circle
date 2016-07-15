@@ -1,0 +1,75 @@
+//Created by zhoutengteng on 16/7/5.
+extends  ./layout_header_only
+block otherLoad
+block content
+    div(style="margin:10px 20% 10px 20%;padding:0 20px 0 20px; " itemId="#{itemId}" id="modify")
+        form(class="form-inline")
+            div(class="form-group" style="width: 70%; margin-bottom: 20px")
+                label(for= "title" style="margin-right: 10px" ) Theme
+                input(type="text" class="form-control" id="theme" placeholder="Theme" style="width: 60%" value="#{theme}")
+            div(class="form-group" style="width: 70%; margin-bottom: 20px")
+                label(for= "author" style="margin-right: 10px" ) Author
+                input(type="text" class="form-control" id="author" placeholder="Theme" style="width: 60%" value="#{author}" readonly)
+        form
+            div(class="form-group")
+                label(for="content" style="margin-right: 10px") Conetent
+                //input(type="text" class="form-control" id="Content" placeholder="conten")
+                div
+                textarea(style="width:82%; height: 200px; resize: none" id="content"  placeholder="简要说明" ) #{content}
+                //span(id ="num" style="position: relative; right:110px; top:-4px" class="bg-success")  剩余可输入700字
+        div.clearfix
+        form(id="fileupload" enctype="multipart/form-data" class="container")
+            div(class="form-group")
+                label Your upload pictures
+            div(class="row fileupload-buttonbar")
+                div(class="col-lg-7")
+                    span(class="btn btn-success fileinput-button" style="margin-right: 20px")
+                        i(class="glyphicon glyphicon-plus")
+                        span Add picture...
+                        input(type="file" name="files[]"  id="add")
+                    button(type="button" class="btn btn-danger delete" id="delete" style="margin-right: 20px")
+                        i(class="glyphicon glyphicon-trash")
+                        span Delete
+                //    //input(type="checkbox" class="toggle")
+                //    span(class="fileupload-process")
+                div(class="col-lg-5 fileupload-progress fade")
+                    div(class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100")
+                        div(class="progress-bar progress-bar-success" style="width:0%;")
+                    div(class="progress-extended") &nbsp;
+                div.clearfix
+        table(role="presentation" class="table table-striped" style="width:600px")
+            tbody(class="files")
+                each pi,index in pic
+                    tr(class="template-upload fade in")
+                        td
+                            span(class="preview")
+                                img(width="62" height="62" src="#{pi.content}" alt="#{pi.name +  pi.id}")
+                        td
+                            p(class="fileName" ) #{pi.name}
+                        td
+                            button(class="btn btn-warning cancel")
+                                i(class="glyphicon glyphicon-ban-circle")
+                                span Cancel
+
+        button(class="btn btn-default" style="margin-top:40px; margin-bottom:20px" id="submit")  更新
+        div
+        form
+            div(class="form-group")
+                textarea(style="width:82%; height: 200px; resize: none" id="comment"  placeholder="您的评论")
+                span(id ="num" style="position: relative; right:110px; top:-4px" class="bg-success")  剩余可输入700字
+        button(type="button" class="btn btn-info" id="give") 提交评论
+        div(class="bs-example" data-example-id="contextual-table" style="width:600px")
+            table(class="table")
+                thead
+                    tr
+                        th(style="padding-left:0px") Comment
+
+    link(href="/upload/css/jquery.fileupload-ui.css", rel="stylesheet")
+    link(href="/upload/css/style.css", rel="stylesheet")
+    link(href="/upload/css/jquery.fileupload.css", rel="stylesheet")
+    script(src="/js/detail.js")
+    script(src="/js/modify.js")
+
+
+
+
