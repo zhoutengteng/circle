@@ -1,1 +1,21 @@
 js放置目录
+circle_edit.js
+	对应用户发起的条目的js文件，负责提交
+	detail.js
+	用户浏览其他的问的条目对应的前端文件的js文件，负责拉取题目信息和提
+   交评论
+	edit.js
+   多余文件
+	header.js
+	处理网页最顶层对应的用户退出和触发那些用户发起条目的链接
+	index.js
+	项目主页的展示信息
+	modify.js
+	用户浏览自己发起的条目的时候，会渲染的modify.jade,包括的modify.js文件负责提交更新条目。
+	profile.js
+	负责拉取最新动态，个人动态和top10等
+	signin.js
+	负责登录验证
+	signup.js
+负责注册验证
+
