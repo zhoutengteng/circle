@@ -1,0 +1,50 @@
+//Created by zhoutengteng on 16/6/21.
+doctype
+html
+    head
+        meta(charset="utf-8")
+        title #{title}
+        include ./includes/head
+        script(src="/js/welcome.js")
+    body
+        div.body.theme-showcase(role="document")
+            div.top(style="background-color: #ffffff; border-color: #ffffff; margin:0px 30px 0px 30px")
+                img.pull-left(src="/picture/title.png", alt="G~L~U~E~C~I~R~C~L~E", style="width:200px; height:60px")
+                form.navbar-form.navbar-right
+                    button(type="submit" class="btn btn-success") Sign up
+                    button(type="submit" class="btn btn-success") Sign in
+                //form.visible-lg-inline-block.bs-example.bs-example-form.col-xs-3.pull-right.navbar-form(data-example-id='simple-input-groups')
+                    div.input-group
+                        span.input-group-addon.glyphicon.glyphicon-search(id="basic-addon1", style="top:0px")
+                        input(type='text',name='find', class="form-control",placeholder="Search...",aria-describedby="basic-addon1")
+                div.clearfix
+            div.clearfix
+        div.body
+            div.jumbotron.text-center
+                h1(style="margin-bottom:50px")
+                    span.label(style="font-size:100px") Hello, 胶圈!
+                div(id="carousel-example-generic", class="carousel slide").col-xs-5
+                    p
+                     span.label.label-info 我们的故事
+                    ol(class="carousel-indicators")
+                        li(data-target="#carousel-example-generic2",data-slide-to="0" ,class="")
+                        li(data-target="#carousel-example-generic2", data-slide-to="1", class="active")
+                        li(data-target="#carousel-example-generic2", data-slide-to="2",class="")
+                    div(class="carousel-inner")
+                        div(class="item active text-center")
+                            img(alt = "First slide [1140x500]", src = "/picture/shoes1.jpg", style="width:100%")
+                        div(class="item")
+                            img( alt="Second slide [1140x500]", src="/picture/shoes2.jpg",style="width:100%")
+                        div(class="item")
+                            img(alt="Third slide [1140x500]", src="/picture/shoes1.jpg",style="width:100%")
+                    a(class="left carousel-control", href="#myCarousel", role="button", data-slide="prev")
+                        span(class="glyphicon glyphicon-chevron-left" aria-hidden="true")
+                        span(class="sr-only") Previous
+                    a(class="right carousel-control", href="#myCarousel", data-slide="next")
+                        span(class="glyphicon glyphicon-chevron-right",aria-hidden="true")
+                        span(class="sr-only") Next
+                p.col-xs-6.pull-right
+                    span 人物、情节、环境是小说的三要素。情节一般包括开端、发展、高潮、结局四部分，有的包括序幕、尾声。环境包括自然环境和社会环境。 小说按照篇幅及容量可分为长篇、中篇、短篇和微型小说（小小说）。按照表现的内容可分为科幻、公案、传奇、武侠、言情、同人、官宦等。按照体制可分为章回体小说、日记体小说、书信体小说、自传体小说。按照语言形式可分为文言小说和白话小说。
+                p.col-xs-2.pull-right
+                    a.btn.btn-primary.btn-lg(href="#" role="button") 关注我们
+                div.clearfix
